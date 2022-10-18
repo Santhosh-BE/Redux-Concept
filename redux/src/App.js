@@ -1,21 +1,16 @@
 import './App.css';
+import {useDispatch,useSelector} from 'react-redux';
+import {VadivelActions,GounderActions} from './index';
 
 function App() {
+  const comedies = useSelector(state=>state);
+  const dispatch = useDispatch();
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>{comedies}</p>
+      <button onClick={()=>dispatch(VadivelActions())}>Vadivel</button>&nbsp;
+      <button onClick={()=>dispatch(GounderActions())}>Gounder</button>
+      
     </div>
   );
 }
