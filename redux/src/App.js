@@ -1,6 +1,7 @@
 import './App.css';
 import {useDispatch,useSelector} from 'react-redux';
-import {VadivelActions,GounderActions} from './index';
+import {VadivelActions,GounderActions} from './action/action';
+
 
 function App() {
   const comedy = useSelector(state=>state);
